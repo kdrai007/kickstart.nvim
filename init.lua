@@ -247,6 +247,7 @@ require('lazy').setup({
   --
   -- Use the `dependencies` key to specify the dependencies of a particular plugin
   require 'custom.plugins.telescope',
+  require 'custom.plugins.colors',
   -- LSP Plugins
   {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
@@ -634,6 +635,7 @@ require('lazy').setup({
     end,
   },
 
+  --[[
   {
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'folke/tokyonight.nvim',
@@ -646,7 +648,7 @@ require('lazy').setup({
       vim.cmd.hi 'Comment gui=none'
     end,
   },
-
+--]]
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
@@ -722,12 +724,12 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  -- require 'kdrai.plugins.debug',
+  -- require 'kdrai.plugins.indent_line',
+  -- require 'kdrai.plugins.lint',
+  require 'kdrai.plugins.autopairs',
+  -- require 'kdrai.plugins.neo-tree',
+  -- require 'kdrai.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'custom.plugins.trouble',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
